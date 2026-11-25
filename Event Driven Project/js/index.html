@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Currency Converter</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="app">
+  <header class="app__header">
+    <h1>Currency Converter</h1>
+    <p class="app__subtitle">Live mid-market rates</p>
+    <span id="status" class="status">Loading…</span>
+  </header>
+
+  <section class="converter">
+    <div class="converter__group">
+      <label for="amount">Amount</label>
+      <input id="amount" type="text" inputmode="decimal" value=" " autocomplete="off" />
+    </div>
+
+    <div class="converter__row">
+      <div class="converter__group">
+        <label for="from-search">From</label>
+        <input id="from-search" class="combo__input" type="text" placeholder="Search currency…" autocomplete="off" />
+        <select id="from"></select>
+      </div>
+      <button id="swap" class="swap-btn" type="button" aria-label="Swap currencies">⇄</button>
+      <div class="converter__group">
+        <label for="to-search">To</label>
+        <input id="to-search" class="combo__input" type="text" placeholder="Search currency…" autocomplete="off" />
+        <select id="to"></select>
+      </div>
+    </div>
+
+    <div class="result">
+      <span id="result-value" class="result__value">—</span>
+      <span id="result-rate" class="result__rate"></span>
+    </div>
+
+    <button id="refresh" class="refresh-btn" type="button">Refresh Rates</button>
+  </section>
+
+  <footer class="app__footer">
+    <p id="last-updated" class="footer__stamp"></p>
+  </footer>
+</div>
+
+<script src="config.js"></script>
+<script src="api.js"></script>
+<script src="converter.js"></script>
+<script src="ui.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

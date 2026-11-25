@@ -1,0 +1,21 @@
+# CurrencySync
+
+Real-time currency converter with live exchange rates.
+
+## Run it
+Just open `index.html` in a browser (no build step needed).
+
+## Files & Responsibilities
+| File | Purpose |
+|------|---------|
+| `index.html` | Structure only |
+| `css/style.css` | Styling only |
+| `js/config.js` | Constants & settings |
+| `js/api.js` | Fetching rates + caching |
+| `js/converter.js` | Pure math (no DOM, no fetch) |
+| `js/ui.js` | DOM reads/writes |
+| `js/app.js` | Glue code / orchestration |
+
+## API
+Uses [open.er-api.com](https://www.exchangerate-api.com/) — free, no key required.
+Rates cached for 5 minutes; auto-refresh every 60 seconds.
